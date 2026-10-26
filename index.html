@@ -371,7 +371,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
       <div class="final-copy">
         <span class="label">Your next report is due sooner than you think</span>
         <h2 id="final-h">Get your next funder report off your plate.</h2>
-        <p>Not ready to pay yet? Join the waitlist and we'll send you our free Funder Report Deadline Tracker, a spreadsheet template for every award you manage.</p>
+        <p>Not ready to pay yet? Join the waitlist and we'll email you our free Funder Report Deadline Tracker within a day. It's a spreadsheet that tracks every grant and report deadline you manage.</p>
       </div>
       <form class="waitlist" id="waitlist-form" novalidate>
         <label for="wl-email">Work email
@@ -449,7 +449,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
       const res = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) });
       if (!res.ok) throw new Error(res.status);
       form.reset();
-      msg.textContent = "You're on the list. Check your inbox for the deadline tracker template.";
+      msg.textContent = "You're on the list. We'll email you the Funder Report Deadline Tracker within a day.";
       msg.hidden = false;
     } catch (_) {
       err.textContent = "Your signup didn't go through. Check your connection and try again.";
